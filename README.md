@@ -1,2 +1,2 @@
-android-training
-================
+Code for Workshop and Assignment
+================================
