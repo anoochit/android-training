@@ -1,0 +1,43 @@
+package com.example.restecho;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class MainActivity extends Activity {
+	
+	static final String uri = "http://172.16.29.48/ws/echo/";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		Button bntSubmit = (Button) findViewById(R.id.button1);
+		final EditText txtName = (EditText) findViewById(R.id.editText1);
+		
+		bntSubmit.setOnClickListener(new OnClickListener() {			
+			@Override
+			public void onClick(View arg0) {
+				// get text value
+				String txtNameValue = txtName.getText().toString().trim();
+				
+				
+				// sent to rest api
+			}
+		});
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}

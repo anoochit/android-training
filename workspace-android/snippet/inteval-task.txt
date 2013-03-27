@@ -1,0 +1,21 @@
+private final static int INTERVAL = 1000 * 60 * 2; //2 minutes
+Handler m_handler;
+
+Runnable m_handlerTask = new Runnable()
+{
+     @Override 
+     public void run() {
+          doSomething();
+          m_handler.postDelayed(m_handlerTask, INTERVAL);
+     }
+}
+
+void startRepeatingTask()
+{
+    m_handlerTask.run(); 
+}
+
+void stopRepeatingTask()
+{
+    m_handler.removeCallback(m_handlerTask);
+}

@@ -1,0 +1,22 @@
+<?php
+
+
+header("content-type:application/json");
+
+$method = $_SERVER["REQUEST_METHOD"];
+
+switch($method){
+	
+	case "POST":
+		
+		if ($_POST["type"]=="c") {
+			
+		} else {
+			
+		}
+		
+		break;
+	default:
+		break;
+	
+}

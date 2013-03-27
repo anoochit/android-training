@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="servcies">
+        <item >Open Browser</item>
+        <item >Call Anuchit</item>
+        <item >Dial 199</item>
+        <item >Search Map</item>
+    </string-array>
+    
+</resources>

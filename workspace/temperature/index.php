@@ -1,0 +1,30 @@
+<?php
+
+header("content-type:application/json");
+
+$method = $_SERVER['REQUEST_METHOD'];
+
+switch($method) {
+
+	case "POST":
+
+		if ($_POST["type"]=="c") {
+			$result=(($_POST["degree"]-32)*5)/9;
+		} else {
+			$result=(($_POST["degree"]*9)/5)+32;
+		}
+
+		$data=array("result"=>$result);
+
+		break;
+
+	default:
+
+		$data=array("result"=>"wrong request");
+
+		break;
+
+}
+
+echo json_encode($data);
+

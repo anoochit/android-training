@@ -1,0 +1,8 @@
+<?php
+
+
+header("content-type:application/json");
+
+$method = $_SERVER["REQUEST_METHOD"];
+
+switch()

@@ -1,0 +1,32 @@
+private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+		ImageView bmImage;
+		
+		public DownloadImageTask(ImageView bmImage) {
+			this.bmImage=bmImage;
+		}
+		
+		@Override
+		protected Bitmap doInBackground(String... urls) {
+			String url = urls[0];
+			Bitmap mIcon = null;
+
+			try {
+				InputStream in = new URL(url).openStream();
+				mIcon = BitmapFactory.decodeStream(in);
+
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return mIcon;
+		}
+
+		@Override
+		protected void onPostExecute(Bitmap result) {
+			// TODO Auto-generated method stub
+			bmImage.setImageBitmap(result);
+		}
+	}
