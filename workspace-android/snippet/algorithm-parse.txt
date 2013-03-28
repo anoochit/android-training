@@ -1,0 +1,31 @@
+
+                       GET http://xxx.xxx.xxx.xxx/yourservice.php    
+[web browser]    ------------------------------------------------------>  [server]   yourservice.php
+					        <------------------------------------------------------		
+                             {"result" : "hello","success" : "true"}
+
+Parser / Extension
+
+
+
+
+
+                 
+                 GET http://xxx.xxx.xxx.xxx/yourservice.php    
+[android]   ---------------------------------------------------------------->  [server]   yourservice.php
+					<---------------------------------------------------------------		
+                      {"result" : "hello","success" : "true"}
+
+1. HTTP Request 
+2. Method GET or POST
+3. Get BufferReader and pack in to "String"  <==== JSON String
+4. JSONObject (JSON String)  -> Parse "String Key"
+5. Get value to use
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+Make Parameter for POST
+=====================
+
+ 
+List<NameValuePair> params = new ArrayList<NameValuePair>();
+params.add(new BasicNameValuePair("sMemberID", MemberID));
+
+POST Method with Build JSON String
+==============================
+
+public String getHttpPost(String url,List<NameValuePair> params) {
+		StringBuilder str = new StringBuilder();
+		HttpClient client = new DefaultHttpClient();
+		HttpPost httpPost = new HttpPost(url);
+		
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(params));
+			HttpResponse response = client.execute(httpPost);
+			StatusLine statusLine = response.getStatusLine();
+			int statusCode = statusLine.getStatusCode();
+			if (statusCode == 200) { // Status OK
+				HttpEntity entity = response.getEntity();
+				InputStream content = entity.getContent();
+				BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+				String line;
+				while ((line = reader.readLine()) != null) {
+					str.append(line);
+				}
+			} else {
+				Log.e("Log", "Failed to download result..");
+			}
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return str.toString();
+	}
+
+GET Method with Build JSON String
+=============================
+
+public String getHttpGet(String url) {
+		StringBuilder str = new StringBuilder();
+		HttpClient client = new DefaultHttpClient();
+		HttpGet httpGet = new HttpGet(url);
+		
+		try {
+			HttpResponse response = client.execute(httpGet);
+			StatusLine statusLine = response.getStatusLine();
+			int statusCode = statusLine.getStatusCode();
+			if (statusCode == 200) { // Status OK
+				HttpEntity entity = response.getEntity();
+				InputStream content = entity.getContent();
+				BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+				String line;
+				while ((line = reader.readLine()) != null) {
+					str.append(line);
+				}
+			} else {
+				Log.e("Log", "Failed to download result..");
+			}
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return str.toString();
+	}
+
+
