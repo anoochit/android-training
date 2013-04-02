@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Locale Your App</string>
+    <string name="action_settings">ตั้งค่า</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="txt_signin">เข้าระบบ</string>
+    <string name="txt_signup">สมัครสมาชิก</string>
+    <string name="txt_username">ชื่อผู้ใช้</string>
+    <string name="txt_password">รหัสผ่าน</string>
+    <string name="txt_hint_username">ใส่ชื่อผู้ใช้ของคุณที่นี่</string>
+    <string name="txt_hint_password">ใส่รหัสผ่านของคุณที่นี่</string>
+
+</resources>

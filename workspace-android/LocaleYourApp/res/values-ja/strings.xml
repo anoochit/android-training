@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Locale Your App</string>
+    <string name="action_settings">設定</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="txt_signin">サインイン</string>
+    <string name="txt_signup">サインアップ</string>
+    <string name="txt_username">ユーザ名</string>
+    <string name="txt_password">パスワード</string>
+    <string name="txt_hint_username">あなたのユーザー名を入力</string>
+    <string name="txt_hint_password">パスワードを入力</string>
+
+</resources>

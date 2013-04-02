@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Locale Your App</string>
+    <string name="action_settings">thiết lập</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="txt_signin">đăng nhập</string>
+    <string name="txt_signup">ghi tên</string>
+    <string name="txt_username">Tên truy nhập</string>
+    <string name="txt_password">mật khẩu</string>
+    <string name="txt_hint_username">gõ tên người dùng của bạn</string>
+    <string name="txt_hint_password">gõ mật khẩu của bạn</string>
+
+</resources>
