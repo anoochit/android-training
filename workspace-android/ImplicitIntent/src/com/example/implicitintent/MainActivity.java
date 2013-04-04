@@ -46,8 +46,19 @@ public class MainActivity extends Activity {
 					break;
 				case 2:
 					intent = new Intent(Intent.ACTION_CALL, Uri
-							.parse("tel:0898433717"));
+							.parse("tel:0898433777"));
 					startActivity(intent);
+					break;
+				case 3:
+					intent = new Intent(Intent.ACTION_VIEW, Uri
+							.parse("geo:0,0?q=13.888203,100.578712 (Laksri)"));
+					startActivity(intent);
+					break;
+				case 4:
+					intent = new Intent(Intent.ACTION_VIEW, Uri
+							.parse("geo:0,0?q=SIPA+สำนักงานส่งเสริมอุตสาหกรรมซอฟต์แวร์แห่งชาติ"));
+					startActivity(intent);
+					break;
 				}
 			}
 		});
