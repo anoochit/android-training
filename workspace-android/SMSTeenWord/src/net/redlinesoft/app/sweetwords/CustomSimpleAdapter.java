@@ -1,4 +1,4 @@
-package com.example.sqliteassetbundle;
+package net.redlinesoft.app.sweetwords;
 
 import java.util.List;
 import java.util.Map;
