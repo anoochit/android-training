@@ -8,13 +8,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.style.TypefaceSpan;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
@@ -61,7 +64,25 @@ public class MainActivity extends Activity {
 		// mapping
 		ListView wordListView = (ListView) findViewById(R.id.listView1);
 		
-		SimpleAdapter adapter = new SimpleAdapter(this, wordList, R.layout.list_column, new String[] {"text"}, new int[] {R.id.textView1});
+		final Typeface font = Typeface.createFromAsset(getAssets(), "fonts/nithan.ttf");
+
+		
+		SimpleAdapter adapter = new SimpleAdapter(this, wordList, R.layout.list_column, new String[] {"text"}, new int[] {R.id.textView1}){
+
+			@Override
+			public View getView(int position, View convertView, ViewGroup parent) {
+				View v = convertView;
+	            if(v== null){
+	                LayoutInflater vi = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	                v=vi.inflate(R.layout.list_column, null);
+	            }
+	            TextView tv = (TextView)v.findViewById(R.id.textView1);
+	            tv.setText(wordList.get(position).get("text"));
+	            tv.setTypeface(font);
+	            return v;
+			}
+			
+		};
 		
 		wordListView.setAdapter(adapter);
 		
@@ -85,7 +106,7 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		//getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
