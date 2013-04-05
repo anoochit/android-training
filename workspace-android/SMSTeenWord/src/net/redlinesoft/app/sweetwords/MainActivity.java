@@ -7,6 +7,10 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdSize;
+import com.google.ads.AdView;
+
 import net.redlinesoft.app.sweetwords.R;
 
 import android.app.Activity;
@@ -22,9 +26,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
 
 public class MainActivity extends Activity {
 
@@ -34,6 +40,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		// admob
+		AdView adView = new AdView(this, AdSize.SMART_BANNER,"a1515e3a6741431");
+		LinearLayout layout = (LinearLayout) findViewById(R.id.adMob);
+		layout.addView(adView);
+		adView.loadAd(new AdRequest());
 		
 		// check database exist
 		try {
