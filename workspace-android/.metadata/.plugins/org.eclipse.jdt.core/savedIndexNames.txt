@@ -1,1 +1,1 @@
-INDEX VERSION 1.126+/home/xavier/workspace-android/.metadata/.plugins/org.eclipse.jdt.core
+INDEX VERSION 1.126+/home/xavier/project/github-projects/android-training/workspace-android/.metadata/.plugins/org.eclipse.jdt.core

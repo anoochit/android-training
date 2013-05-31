@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;com.example.restecho&apos; to &apos;com.example.restgetdatetime&apos;&#x0A;- Original project: &apos;RESTGetDateTime&apos;&#x0A;- Original element: &apos;RESTGetDateTime/src/com.example.restecho&apos;&#x0A;- Renamed element: &apos;RESTGetDateTime/src/com.example.restgetdatetime&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.example.restecho&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.example.restecho" name="com.example.restgetdatetime" qualified="false" references="true" stamp="1364357322962" textual="false" version="1.0"/>
-</session>
