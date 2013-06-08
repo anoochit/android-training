@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="android.widget.Spinner"/>
-<fullyQualifiedTypeName name="android.widget.AdapterView.OnItemSelectedListener"/>
-<fullyQualifiedTypeName name="com.example.picker.R.id"/>
-<fullyQualifiedTypeName name="com.example.picker.MainActivity"/>
-<fullyQualifiedTypeName name="net.redlinesoft.app.simpleshareintent.R.id"/>
-<fullyQualifiedTypeName name="com.example.simpleshareintent.R.id"/>
-<fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.example.listviewstringarray.R.id"/>
 <fullyQualifiedTypeName name="com.example.listviewstringarray.R.layout"/>
 <fullyQualifiedTypeName name="android.widget.ListView"/>
-<fullyQualifiedTypeName name="android.webkit.WebView.FindListener"/>
 <fullyQualifiedTypeName name="android.R.id"/>
 <fullyQualifiedTypeName name="com.example.listviewcustomadapter.R.string"/>
 <fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
@@ -22,11 +14,9 @@
 <fullyQualifiedTypeName name="com.example.listviewcustomadapter.CustomArrayAdapter"/>
 <fullyQualifiedTypeName name="com.example.listviewcustomadapter.R.layout"/>
 <fullyQualifiedTypeName name="com.example.listviewcustomadapter.R.id"/>
-<fullyQualifiedTypeName name="android.widget.BaseAdapter"/>
 <fullyQualifiedTypeName name="com.example.listviewcustomlayout.MainActivity"/>
 <fullyQualifiedTypeName name="com.example.listviewcustomlayout.R.layout"/>
 <fullyQualifiedTypeName name="com.example.listviewcustomlayout.R.id"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="android.widget.SimpleAdapter"/>
 <fullyQualifiedTypeName name="net.redlinesoft.app.listviewcustomlayout.R.layout"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="android.app.DatePickerDialog"/>
 <fullyQualifiedTypeName name="android.app.TimePickerDialog"/>
 <fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="android.widget.BaseAdapter"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.example.customlistview.Flags"/>
+<fullyQualifiedTypeName name="com.example.customlistview.R.drawable"/>
+<fullyQualifiedTypeName name="com.example.customlistview.R.id"/>
+<fullyQualifiedTypeName name="com.example.customlistview.FlagAdapter"/>
+<fullyQualifiedTypeName name="com.example.customlistview.R.layout"/>
+<fullyQualifiedTypeName name="android.webkit.WebView.FindListener"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
 </qualifiedTypeNameHistroy>
