@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.redlinesoft.app.simpledialog.R.drawable"/>
-<fullyQualifiedTypeName name="net.redlinesoft.app.simpledialog.MainActivity.SimpleAlertDialog"/>
-<fullyQualifiedTypeName name="android.support.v4.app.DialogFragment"/>
-<fullyQualifiedTypeName name="net.redlinesoft.app.simplealertdialog.R.id"/>
-<fullyQualifiedTypeName name="net.redlinesoft.app.simplealertdialog.R.drawable"/>
 <fullyQualifiedTypeName name="com.example.simpledialog.R.id"/>
 <fullyQualifiedTypeName name="android.app.AlertDialog"/>
 <fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
@@ -49,7 +44,6 @@
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="android.provider.Settings"/>
 <fullyQualifiedTypeName name="android.location.LocationManager"/>
-<fullyQualifiedTypeName name="android.content.Context"/>
 <fullyQualifiedTypeName name="android.location.Criteria"/>
 <fullyQualifiedTypeName name="android.location.LocationListener"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="com.google.android.gms.maps.model.MarkerOptions"/>
 <fullyQualifiedTypeName name="com.google.android.gms.maps.MapFragment"/>
 <fullyQualifiedTypeName name="com.google.android.gms.maps.CameraUpdateFactory"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="net.redlinesoft.app.currencyexchange.R.id"/>
+<fullyQualifiedTypeName name="android.widget.BaseAdapter"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="net.redlinesoft.app.currencyexchange.CurrencyAdapter.ViewHolder"/>
 </qualifiedTypeNameHistroy>
