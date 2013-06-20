@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<fullyQualifiedTypeName name="com.example.listviewstringarray.R.id"/>
+<fullyQualifiedTypeName name="com.example.listviewstringarray.R.layout"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="android.R.id"/>
+<fullyQualifiedTypeName name="com.example.listviewcustomadapter.R.string"/>
+<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
+<fullyQualifiedTypeName name="com.example.listviewstringarray.R.array"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="com.example.listviewcustomadapter.R.array"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.array"/>
+<fullyQualifiedTypeName name="com.example.listviewcustomadapter.CustomArrayAdapter"/>
+<fullyQualifiedTypeName name="com.example.listviewcustomadapter.R.layout"/>
+<fullyQualifiedTypeName name="com.example.listviewcustomadapter.R.id"/>
+<fullyQualifiedTypeName name="com.example.listviewcustomlayout.MainActivity"/>
+<fullyQualifiedTypeName name="com.example.listviewcustomlayout.R.layout"/>
+<fullyQualifiedTypeName name="com.example.listviewcustomlayout.R.id"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="android.widget.SimpleAdapter"/>
+<fullyQualifiedTypeName name="net.redlinesoft.app.listviewcustomlayout.R.layout"/>
+<fullyQualifiedTypeName name="net.redlinesoft.app.listviewcustomlayout.R.id"/>
+=======
+>>>>>>> d3e10fd04230813240c005b4625ab9dcc990b28c
+<fullyQualifiedTypeName name="net.redlinesoft.app.simpledialog.R.drawable"/>
+<fullyQualifiedTypeName name="net.redlinesoft.app.simpledialog.MainActivity.SimpleAlertDialog"/>
+<fullyQualifiedTypeName name="android.support.v4.app.DialogFragment"/>
+<fullyQualifiedTypeName name="net.redlinesoft.app.simplealertdialog.R.id"/>
+<fullyQualifiedTypeName name="net.redlinesoft.app.simplealertdialog.R.drawable"/>
+>>>>>>> a7ce559f4d224cddcd69f0c2dd50f68d4b5d59c8
 <fullyQualifiedTypeName name="com.example.simpledialog.R.id"/>
 <fullyQualifiedTypeName name="android.app.AlertDialog"/>
 <fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
@@ -44,6 +76,22 @@
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="android.provider.Settings"/>
 <fullyQualifiedTypeName name="android.location.LocationManager"/>
+<<<<<<< HEAD
+=======
+<fullyQualifiedTypeName name="android.content.Context"/>
+<<<<<<< HEAD
+<fullyQualifiedTypeName name="android.widget.BaseAdapter"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.example.customlistview.Flags"/>
+<fullyQualifiedTypeName name="com.example.customlistview.R.drawable"/>
+<fullyQualifiedTypeName name="com.example.customlistview.R.id"/>
+<fullyQualifiedTypeName name="com.example.customlistview.FlagAdapter"/>
+<fullyQualifiedTypeName name="com.example.customlistview.R.layout"/>
+<fullyQualifiedTypeName name="android.webkit.WebView.FindListener"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+=======
+>>>>>>> a7ce559f4d224cddcd69f0c2dd50f68d4b5d59c8
 <fullyQualifiedTypeName name="android.location.Criteria"/>
 <fullyQualifiedTypeName name="android.location.LocationListener"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
@@ -54,10 +102,14 @@
 <fullyQualifiedTypeName name="com.google.android.gms.maps.model.MarkerOptions"/>
 <fullyQualifiedTypeName name="com.google.android.gms.maps.MapFragment"/>
 <fullyQualifiedTypeName name="com.google.android.gms.maps.CameraUpdateFactory"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="android.widget.ListView"/>
 <fullyQualifiedTypeName name="net.redlinesoft.app.currencyexchange.R.id"/>
 <fullyQualifiedTypeName name="android.widget.BaseAdapter"/>
 <fullyQualifiedTypeName name="android.view.LayoutInflater"/>
 <fullyQualifiedTypeName name="android.content.Context"/>
 <fullyQualifiedTypeName name="net.redlinesoft.app.currencyexchange.CurrencyAdapter.ViewHolder"/>
+=======
+>>>>>>> d3e10fd04230813240c005b4625ab9dcc990b28c
+>>>>>>> a7ce559f4d224cddcd69f0c2dd50f68d4b5d59c8
 </qualifiedTypeNameHistroy>

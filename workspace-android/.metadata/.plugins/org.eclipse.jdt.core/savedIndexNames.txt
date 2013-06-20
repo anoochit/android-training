@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+INDEX VERSION 1.126+/home/xavier/project/github-project/android-training/workspace-android/.metadata/.plugins/org.eclipse.jdt.core
+=======
 INDEX VERSION 1.126+/home/xavier/project/github-projects/android-training/workspace-android/.metadata/.plugins/org.eclipse.jdt.core
+<<<<<<< HEAD
 94586869.index
 3460381786.index
 1508247815.index
+=======
+>>>>>>> d3e10fd04230813240c005b4625ab9dcc990b28c
+>>>>>>> a7ce559f4d224cddcd69f0c2dd50f68d4b5d59c8

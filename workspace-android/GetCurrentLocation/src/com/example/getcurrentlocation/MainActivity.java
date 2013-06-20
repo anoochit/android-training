@@ -14,6 +14,8 @@ import android.widget.Toast;
 public class MainActivity extends Activity implements LocationListener {
 
 	TextView txtLat,txtLon,txtProvider;
+	String provider;
+	LocationManager locationManager;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +26,10 @@ public class MainActivity extends Activity implements LocationListener {
 		txtLon = (TextView) findViewById(R.id.textView3);
 		txtProvider = (TextView) findViewById(R.id.textView1);
 		
-		LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		
 		Criteria criteria = new Criteria();
-		String provider = locationManager.getBestProvider(criteria, true);
+		provider = locationManager.getBestProvider(criteria, true);
 		Location location = locationManager.getLastKnownLocation(provider);
 		
 		if (location!=null) {
@@ -38,6 +40,20 @@ public class MainActivity extends Activity implements LocationListener {
 			txtLon.setText("location not available");
 		}
 		
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		locationManager.requestLocationUpdates(provider, 400, 1, this);
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		locationManager.removeUpdates(this);
 	}
 
 	@Override
