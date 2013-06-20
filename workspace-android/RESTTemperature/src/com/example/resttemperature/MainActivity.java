@@ -35,7 +35,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	static final String uri = "http://172.16.29.48/ws/temperature/";
+	static final String uri = "http://aru-redcloud.rhcloud.com/temperature/index.php";
 	ArrayList<NameValuePair> params;
 	TextView txtResult;
 	String unitType = "c";

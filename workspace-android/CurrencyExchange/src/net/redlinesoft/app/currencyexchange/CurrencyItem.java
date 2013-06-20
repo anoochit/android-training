@@ -7,7 +7,7 @@ public class CurrencyItem {
 	Drawable icon;
 	String title_short;
 	String title_long;
-	float rate;
+	double rate;
 	
 	public Drawable getIcon() {
 		return icon;
@@ -18,7 +18,7 @@ public class CurrencyItem {
 	public String getTitle_short() {
 		return title_short;
 	}
-	public void setTitle_short(String title_short) {
+	public void setTitle_short(String title_short) {		
 		this.title_short = title_short;
 	}
 	public String getTitle_long() {
@@ -27,11 +27,13 @@ public class CurrencyItem {
 	public void setTitle_long(String title_long) {
 		this.title_long = title_long;
 	}
-	public float getRate() {
+	public double getRate() {
 		return rate;
 	}
-	public void setRate(float rate) {
-		this.rate = rate;
+	public void setRate(double d) {
+		this.rate = d;
 	}
+	
+
 	
 }

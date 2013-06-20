@@ -1,7 +1,5 @@
 Make Parameter for POST
 =====================
-
- 
 List<NameValuePair> params = new ArrayList<NameValuePair>();
 params.add(new BasicNameValuePair("sMemberID", MemberID));
 

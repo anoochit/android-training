@@ -1,5 +1,6 @@
 package net.redlinesoft.app.currencyexchange;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 import android.content.Context;
@@ -51,7 +52,7 @@ public class CurrencyAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			holder.icon = (ImageView) convertView.findViewById(R.id.iconCurency);
 			holder.title_long = (TextView) convertView.findViewById(R.id.textTitleLong);
-			holder.title_short = (TextView) convertView.findViewById(R.id.textTitleLong);
+			holder.title_short = (TextView) convertView.findViewById(R.id.textTitleShort);
 			holder.rate = (TextView) convertView.findViewById(R.id.textRate);			
 			convertView.setTag(holder);
 			
@@ -62,7 +63,9 @@ public class CurrencyAdapter extends BaseAdapter {
 		holder.icon.setImageDrawable(item.get(position).getIcon());
 		holder.title_long.setText(item.get(position).getTitle_long());
 		holder.title_short.setText(item.get(position).getTitle_short());
-		holder.rate.setText(String.valueOf(item.get(position).getRate()));
+		 
+		
+		holder.rate.setText(NumberFormat.getInstance().format(item.get(position).getRate()));
 		
 		return convertView;
 	}

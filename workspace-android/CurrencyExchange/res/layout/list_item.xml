@@ -5,6 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     android:textAlignment="gravity" >
 
     <LinearLayout
@@ -21,22 +23,22 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
 
             <TextView
                 android:id="@+id/textTitleLong"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:text="Medium Text Text Text"
+                android:text="Medium Text"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/textTitleShort"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TT"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
 
         <LinearLayout

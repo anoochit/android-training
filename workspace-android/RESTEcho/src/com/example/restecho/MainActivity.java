@@ -33,7 +33,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
-	static final String uri = "http://172.16.29.48/ws/echo/";
+	static final String uri = "http://aru-redcloud.rhcloud.com/echo/index.php";
 	ArrayList<NameValuePair> params;
 	TextView txtResult;
 	
