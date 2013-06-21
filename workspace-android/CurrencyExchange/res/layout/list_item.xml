@@ -31,13 +31,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:text="Medium Text"
+                android:text="Medium Text" 
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/textTitleShort"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" 
                 android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
 
@@ -45,17 +45,21 @@
             android:id="@+id/LinearLayout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical" >
+            android:layout_gravity="right"
+            android:gravity="right|center_vertical" >
 
             <TextView
                 android:id="@+id/textRate"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="right"
+                android:background="@drawable/shape"
+                android:gravity="center_horizontal"
+                android:padding="2dp"
                 android:singleLine="true"
                 android:text="00.00"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/White"
+                android:width="70dp" />
         </LinearLayout>
     </LinearLayout>
 

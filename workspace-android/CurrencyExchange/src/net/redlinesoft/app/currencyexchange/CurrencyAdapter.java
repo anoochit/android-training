@@ -16,6 +16,7 @@ public class CurrencyAdapter extends BaseAdapter {
 	Context context;
 	ArrayList<CurrencyItem> item;
 	LayoutInflater inflater;
+	ViewHolder holder;
 
 	public CurrencyAdapter(ArrayList<CurrencyItem> item, Context context) {
 		// TODO Auto-generated constructor stub
@@ -44,18 +45,15 @@ public class CurrencyAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		ViewHolder holder;
 		
-		if (convertView==null) {
-			
+		if (convertView==null) {			
 			convertView = inflater.inflate(R.layout.list_item, null);
 			holder = new ViewHolder();
 			holder.icon = (ImageView) convertView.findViewById(R.id.iconCurency);
 			holder.title_long = (TextView) convertView.findViewById(R.id.textTitleLong);
 			holder.title_short = (TextView) convertView.findViewById(R.id.textTitleShort);
 			holder.rate = (TextView) convertView.findViewById(R.id.textRate);			
-			convertView.setTag(holder);
-			
+			convertView.setTag(holder);			
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
@@ -63,12 +61,16 @@ public class CurrencyAdapter extends BaseAdapter {
 		holder.icon.setImageDrawable(item.get(position).getIcon());
 		holder.title_long.setText(item.get(position).getTitle_long());
 		holder.title_short.setText(item.get(position).getTitle_short());
-		 
 		
-		holder.rate.setText(NumberFormat.getInstance().format(item.get(position).getRate()));
+//		if (item.get(position).getRate()==0) {
+//			holder.rate.setText("n/a");
+//		} else {
+			holder.rate.setText(NumberFormat.getInstance().format(item.get(position).getRate()));	
+//		}
+		
 		
 		return convertView;
-	}
+	}	
 	
 	class ViewHolder {
 		ImageView icon;
@@ -76,5 +78,6 @@ public class CurrencyAdapter extends BaseAdapter {
 		TextView title_short;
 		TextView rate;
 	}
-
+	
+	
 }
