@@ -7,6 +7,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -62,12 +64,13 @@ public class CurrencyAdapter extends BaseAdapter {
 		holder.title_long.setText(item.get(position).getTitle_long());
 		holder.title_short.setText(item.get(position).getTitle_short());
 		
-//		if (item.get(position).getRate()==0) {
-//			holder.rate.setText("n/a");
-//		} else {
-			holder.rate.setText(NumberFormat.getInstance().format(item.get(position).getRate()));	
-//		}
+		String strAmount = NumberFormat.getInstance().format(item.get(position).getRate());
 		
+		if (strAmount.equals("0")) {
+			holder.rate.setText("n/a");
+		} else {
+			holder.rate.setText(strAmount);	
+		}
 		
 		return convertView;
 	}	
