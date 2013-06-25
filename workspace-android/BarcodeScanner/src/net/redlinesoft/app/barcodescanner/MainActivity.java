@@ -25,7 +25,6 @@ public class MainActivity extends Activity {
 		bntScan.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				Activity MainActivity = null;
 				// TODO Auto-generated method stub
 				IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
 				integrator.initiateScan();
