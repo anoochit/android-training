@@ -24,6 +24,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
@@ -33,12 +36,22 @@ public class MainActivity extends Activity {
 	Context context;	
 	ArrayList<CurrencyItem> currencyList;
 	
+	Animation animation;
+	LayoutAnimationController animationController;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);	
 		setContentView(R.layout.activity_main);
 		context = this;
-		listView = (ListView) findViewById(R.id.listCurrency);		
+		
+		listView = (ListView) findViewById(R.id.listCurrency);
+		
+		animation = AnimationUtils.loadAnimation(context, R.anim.listview_animation);
+		animationController = new LayoutAnimationController(animation);
+		
+		
 		new GetCurrency().execute(new String[] {null});
 	}
 
@@ -60,6 +73,7 @@ public class MainActivity extends Activity {
 		protected void onPostExecute(ArrayList result) {
 			super.onPostExecute(result);
 			listView.setAdapter(new CurrencyAdapter(result, context));
+			listView.setLayoutAnimation(animationController);
 			dialog.dismiss();
 		}
 

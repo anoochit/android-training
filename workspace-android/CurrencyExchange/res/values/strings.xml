@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CurrencyExchange</string>
+    <string name="app_name">Thai Currency Exchange</string>
     <string name="action_refresh">Refresh</string>
 
     <string-array name="cur_string">
