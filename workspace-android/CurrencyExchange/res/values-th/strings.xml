@@ -2,5 +2,6 @@
 
     <string name="action_settings">ตั้งค่า</string>
     <string name="app_name">อัตราแลกเปลี่ยนเงินบาท</string>
+    <string name="txt_loading">กำลังโหลดข้อมูล...</string>
 
 </resources>

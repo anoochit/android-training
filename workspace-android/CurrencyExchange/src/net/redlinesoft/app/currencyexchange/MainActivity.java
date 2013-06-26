@@ -27,38 +27,68 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+
+import com.google.ads.*;
+import com.google.analytics.tracking.android.EasyTracker;
 
 public class MainActivity extends Activity {
 
 	CurrencyItem currencyItem;
 	ListView listView;
-	Context context;	
+	Context context;
 	ArrayList<CurrencyItem> currencyList;
-	
+
 	Animation animation;
 	LayoutAnimationController animationController;
-	
+
+	AdView adView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);	
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		context = this;
-		
+
+		// Admob
+		adView = new AdView(this, AdSize.SMART_BANNER, "a151ca5c6ed1b74");
+		LinearLayout layout = (LinearLayout) findViewById(R.id.adMob);
+		layout.addView(adView);
+		adView.loadAd(new AdRequest());
+
+		// Mapping
 		listView = (ListView) findViewById(R.id.listCurrency);
-		
-		animation = AnimationUtils.loadAnimation(context, R.anim.listview_animation);
+
+		animation = AnimationUtils.loadAnimation(context,R.anim.listview_animation);
 		animationController = new LayoutAnimationController(animation);
-		
-		
-		new GetCurrency().execute(new String[] {null});
+
+		new GetCurrency().execute(new String[] { null });
+	}
+
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		EasyTracker.getInstance().activityStart(this);
+	}
+
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		EasyTracker.getInstance().activityStop(this);
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
 	}
 
 	class GetCurrency extends AsyncTask<String, Void, ArrayList> {
-		
+
 		ProgressDialog dialog;
-				
+
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
@@ -68,7 +98,7 @@ public class MainActivity extends Activity {
 			dialog.setCancelable(false);
 			dialog.show();
 		}
-		
+
 		@Override
 		protected void onPostExecute(ArrayList result) {
 			super.onPostExecute(result);
@@ -79,14 +109,14 @@ public class MainActivity extends Activity {
 
 		public Double getCurrency(String code) {
 			Double result = 0.0;
-			
+
 			String API_KEY = "0b8ffb5684a9b3a8c45e49b65cdc6c56681053f1";
 			String URL_BEGIN = "http://currency-api.appspot.com/api/";
 			String URL_END = "/THB.json?key=" + API_KEY;
-			
+
 			StringBuilder str = new StringBuilder();
 			HttpClient client = new DefaultHttpClient();
-			HttpGet httpGet = new HttpGet(URL_BEGIN+code+URL_END); 
+			HttpGet httpGet = new HttpGet(URL_BEGIN + code + URL_END);
 
 			try {
 				HttpResponse response = client.execute(httpGet);
@@ -95,7 +125,8 @@ public class MainActivity extends Activity {
 				if (statusCode == 200) { // Status OK
 					HttpEntity entity = response.getEntity();
 					InputStream content = entity.getContent();
-					BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+					BufferedReader reader = new BufferedReader(
+							new InputStreamReader(content));
 					String line;
 					while ((line = reader.readLine()) != null) {
 						str.append(line);
@@ -105,7 +136,6 @@ public class MainActivity extends Activity {
 						result = jsonObject.getDouble("amount");
 						Log.d("LOG", result.toString());
 					} catch (JSONException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 						Log.e("Log", e.getMessage());
 					}
@@ -133,11 +163,13 @@ public class MainActivity extends Activity {
 					R.drawable.ic_philippine, R.drawable.ic_sweden,
 					R.drawable.ic_singapore, R.drawable.ic_usa,
 					R.drawable.ic_southafrican };
-			String[] curTitle = getResources().getStringArray(R.array.cur_string);
-			String[] curSign = getResources().getStringArray(R.array.sgn_string);
-			
+			String[] curTitle = getResources().getStringArray(
+					R.array.cur_string);
+			String[] curSign = getResources()
+					.getStringArray(R.array.sgn_string);
+
 			currencyList = new ArrayList<CurrencyItem>();
-			
+
 			for (int i = 0; i < curIcon.length; i++) {
 				currencyItem = new CurrencyItem();
 				currencyItem.setIcon(getResources().getDrawable(curIcon[i]));
@@ -146,19 +178,19 @@ public class MainActivity extends Activity {
 				currencyItem.setRate(this.getCurrency(curSign[i].toString()));
 				currencyList.add(currencyItem);
 			}
-			
+
 			return currencyList;
 		}
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-        case R.id.action_refresh:
-        	new GetCurrency().execute(new String[] {null});
-            return true;        
-        default:
-            return super.onOptionsItemSelected(item);
+		case R.id.action_refresh:
+			new GetCurrency().execute(new String[] { null });
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
 		}
 	}
 

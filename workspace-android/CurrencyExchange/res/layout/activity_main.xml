@@ -5,12 +5,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity" >
+    
+    <LinearLayout
+        android:id="@+id/adMob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listCurrency"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="false" >
+        android:clickable="false"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
     </ListView>
 
 </LinearLayout>
